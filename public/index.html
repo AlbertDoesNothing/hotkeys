@@ -53,5 +53,38 @@
             </button>
         </div>
     </div>
+
+    <div class="pop-up-modal" id="modalSettings">
+        <div class="pop-up-container">
+            <div class="pop-up-header">
+                <span class="pop-header-title">Settings</span>
+                <button class="pop-header-close-btn" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="pop-up-content">
+                <fieldset class="pop-up-fieldset">
+                    <legend class="pop-fieldset-legend">Set Shortcut</legend>
+                    <input type="text" id="shortcut" class="pop-up-input" placeholder="e.g., ctrl+shift+e" />
+                </fieldset>
+                <fieldset class="pop-up-fieldset">
+                    <legend class="pop-fieldset-legend">Additional Settings</legend>
+                    <div class="pop-up-checkbox-container">
+                        <label for="autoIdle" class="pop-up-checkbox-label">Automatically Idle</label>
+                        <input type="checkbox" id="autoIdle" class="pop-up-checkbox" />
+                        <div class="auto-idle-check">
+                            <label for="autoIdleDelay" class="pop-up-checkbox-label">Disable After (1-3600s):</label>
+                            <input type="number" id="autoIdleDelay" class="pop-up-input-small" min="1" max="3600" value="60" />
+                        </div>
+                        <label for="toggleMinimize" class="pop-up-checkbox-label">Toggle Minimize</label>
+                        <input type="checkbox" id="toggleMinimize" class="pop-up-checkbox" checked/>
+
+                        <div class="auto-minimize-check">
+                            <label for="autoMinimizeShortcut" class="pop-up-checkbox-label">Shortcut:</label>
+                            <input type="text" id="autoMinimizeShortcut" class="pop-up-input" placeholder="e.g., ctrl+shift+m" value="ctrl+m"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
     <script src="./script/main.js"></script>
 </body>
