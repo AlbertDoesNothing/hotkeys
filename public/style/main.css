@@ -32,7 +32,7 @@ body {
         height: fit-content;
         
         & .header-left {
-            width: 28.5%;
+            width: 30%;
             object-fit: contain;
 
             & img {
@@ -69,7 +69,7 @@ body {
         border: 1px dashed var(--primary-color);
         margin: calc(var(--margin-default) * 2);
         border-radius: var(--border-radius-default);
-        margin-top: -5%;
+        margin-top: -7.25%;
 
         & .info-icons {
             font-weight: bold;
@@ -81,79 +81,82 @@ body {
             opacity: var(--opacity-default);
         }
     }
+
+    & .main {
+        display : flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calc(var(--padding-default) * 2);
+        gap: calc(var(--gap-default) * 2);
+        margin: calc(var(--margin-default) * 1.25) 0;
+        margin-top: -5%;
+
+        & .main-right-container {
+                display: flex;
+                align-items: center;
+                gap: calc(var(--gap-default) / 1.5);
+
+                & .settings {
+                    font-size: 1.05rem;
+                    padding: calc(var(--padding-default) / 3.5) calc(var(--padding-default) / 1.25);
+                    cursor: pointer;
+                }
+
+                & .start-btn {
+                    background: var(--primary-color);
+                    color: var(--default-color);
+                    border-radius: var(--border-radius-default);
+                    cursor: pointer;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: calc(var(--padding-default) / 1.5) calc(var(--padding-default) * 4.25);
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        scale: 1.05;
+                        transition: all 0.3s ease;
+                    }
+                }
+        }
+
+        & .main-text-status,
+        & .main-text-ruleset {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--gap-default) / 2);
+            font-size: 0.95rem;
+
+            & .main-text-status,
+            & .main-text-ruleset {
+                font-weight: 500;
+
+                &:not(.main-text-ruleset)::before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: calc(var(--border-radius-default) * 10);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: calc(var(--margin-default) / 5);
+                }
+            }
+
+
+
+            & .inactive {
+                color : #ae1534;
+                &::before {
+                    background: #ae1534;
+                }
+            }
+            & .active {
+                color : #159134;
+                &::before {
+                    background: #159134;
+                }
+            }
+        }
+    }
 }
-
-
-
-/* html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #222, #444);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.window {
-  width: 560px;
-  height: 320px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.titlebar {
-  -webkit-app-region: drag;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-}
-
-.titlebar .icon {
-  height: 20px;
-  width: 20px;
-  margin-right: 8px;
-  -webkit-app-region: no-drag;
-}
-
-.titlebar .controls {
-  margin-left: auto;
-  display: flex;
-  gap: 8px;
-}
-
-.btn {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  -webkit-app-region: no-drag;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-}
-
-button {
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  -webkit-app-region: no-drag;
-} */
